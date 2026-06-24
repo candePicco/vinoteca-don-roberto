@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}CRUD Vinos{% endblock %}
+
+{% block body %}
+
+<h1>CRUD Vinos</h1>
+
+<a href="{% url 'vino_crear' %}" class="boton">
+    Agregar vino
+</a>
+
+<ul class="lista">
+
+{% for vino in vinos %}
+
+<li class="card">
+
+    {% if vino.imagen %}
+        <img src="{{ vino.imagen.url }}">
+        <br>
+    {% endif %}
+
+    <strong>{{ vino.nombre }}</strong><br>
+
+    Bodega: {{ vino.bodega }}<br>
+
+    Categoría: {{ vino.categoria }}<br>
+
+    Precio: ${{ vino.precio }}<br>
+
+    Stock: {{ vino.stock }}<br>
+
+    Estado:
+    {% if vino.activo %}
+        ✅ Activo
+    {% else %}
+        ❌ Desactivado
+    {% endif %}
+
+    <br><br>
+
+    <a href="{% url 'vino_editar' vino.id %}" class="boton">
+        Editar
+    </a>
+
+    <a href="{% url 'vino_toggle' vino.id %}" class="boton">
+
+        {% if vino.activo %}
+            Desactivar
+        {% else %}
+            Activar
+        {% endif %}
+
+    </a>
+
+    <a href="{% url 'vino_eliminar' vino.id %}" class="boton">
+        Eliminar
+    </a>
+
+</li>
+
+{% empty %}
+
+<li class="card">No hay vinos cargados.</li>
+
+{% endfor %}
+
+</ul>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block body %}
+
+<section class="hero">
+    <div>
+        <p class="etiqueta">VINOTECA DON ROBERTO</p>
+
+        <h2>Selección de vinos para cada ocasión</h2>
+
+        <p>
+            Descubrí vinos tintos, blancos y espumantes de distintas bodegas.
+            Elegí tus favoritos y consultá la disponibilidad.
+        </p>
+
+        <a href="{% url 'vinos_disponibles' %}" class="boton">
+            Ver catálogo
+        </a>
+    </div>
+</section>
+
+<h2 class="seccion-titulo">Vinos destacados</h2>
+
+<ul class="lista">
+    {% for vino in vinos %}
+        <li class="card">
+            {% if vino.imagen %}
+                <img src="{{ vino.imagen.url }}">
+            {% endif %}
+
+            <strong>{{ vino.nombre }}</strong>
+            <span>{{ vino.bodega }}</span>
+            <p>{{ vino.categoria }}</p>
+            <p class="precio">${{ vino.precio }}</p>
+            <a href="#" class="boton">
+             Agregar al carrito
+            </a>
+        </li>
+    {% empty %}
+        <li class="card">No hay vinos destacados.</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

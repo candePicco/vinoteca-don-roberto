@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Vinoteca{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'gestion/styles.css' %}">
+</head>
+<body>
+
+<div class="topbar">
+    <div class="topbar-track">
+        <span>
+            • 🍷 10% OFF en vinos seleccionados • 🚚 Envío gratis en compras superiores a $100.000 •
+        </span>
+    </div>
+</div>
+
+<header class="header">
+    <h1>{{ nombre_sistema }}</h1>
+</header>
+
+<nav class="navbar">
+
+    <a href="{% url 'home' %}">Inicio</a>
+
+    <a href="{% url 'vinos_disponibles' %}">
+        Vinos
+    </a>
+
+    {% if user.is_authenticated %}
+
+        {% if perms.gestion.view_vino %}
+            <a href="{% url 'vino_listar' %}">
+                Gestión de vinos
+            </a>
+        {% endif %}
+
+        {% if perms.gestion.view_cliente %}
+            <a href="{% url 'cliente_listar' %}">
+                Clientes
+            </a>
+        {% endif %}
+
+        {% if perms.gestion.view_venta %}
+            <a href="{% url 'venta_listar' %}">
+                Ventas
+            </a>
+        {% endif %}
+
+        <span class="usuario">
+            👤 {{ user.username }}
+        </span>
+
+        <a href="{% url 'logout' %}">
+            Cerrar sesión
+        </a>
+
+    {% else %}
+
+        <a href="{% url 'login' %}">
+            Login
+        </a>
+
+        <a href="{% url 'registro' %}">
+            Registro
+        </a>
+
+    {% endif %}
+
+</nav>
+
+<main class="contenedor">
+    {% block body %}
+    {% endblock %}
+</main>
+
+<footer class="footer">
+    {{ nombre_sistema }} - Versión {{ version }}
+</footer>
+
+</body>
+</html>

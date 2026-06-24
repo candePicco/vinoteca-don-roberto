@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Vinos disponibles{% endblock %}
+
+{% block body %}
+
+<h1>Nuestros vinos</h1>
+
+<p class="intro-catalogo">
+    Conocé nuestra selección de vinos disponibles.
+</p>
+
+<ul class="lista">
+    {% for vino in vinos %}
+
+        <li class="card">
+            {% if vino.imagen %}
+                <img src="{{ vino.imagen.url }}">
+            {% endif %}
+
+            <strong>{{ vino.nombre }}</strong>
+
+            <span>{{ vino.bodega }}</span>
+
+            <p>Tipo: {{ vino.categoria }}</p>
+
+            <p class="precio">${{ vino.precio }}</p>
+
+            <p>Stock disponible: {{ vino.stock }}</p>
+
+            <a href="#" class="boton">
+                Agregar al carrito
+            </a>
+        </li>
+
+    {% empty %}
+
+        <li class="card">
+            No hay vinos disponibles.
+        </li>
+
+    {% endfor %}
+</ul>
+
+{% endblock %}

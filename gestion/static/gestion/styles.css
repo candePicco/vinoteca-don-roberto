@@ -1,0 +1,282 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#faf7f3;
+    color:#2b1d1d;
+}
+
+.topbar{
+    background:#1f0b0d;
+    color:#f1d59b;
+    text-align:center;
+    padding:9px;
+    font-size:13px;
+}
+
+.header{
+    background:white;
+    text-align:center;
+    padding:35px 20px;
+    border-bottom:1px solid #ead6b1;
+}
+
+.header h1{
+    margin:0;
+    color:#4b1118;
+    font-size:42px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.header p{
+    margin:8px 0 0;
+    color:#8f2e35;
+}
+
+.navbar{
+    background:rgb(95, 27, 27);
+    padding:16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:24px;
+    flex-wrap:wrap;
+    border-bottom:1px solid #ead6b1;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+.navbar a{
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.navbar a:hover{
+    color:#8f2e35;
+}
+
+.usuario{
+    background:#8d3e47;
+    color:white;
+    padding:8px 14px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.contenedor{
+    width:90%;
+    max-width:1180px;
+    margin:auto;
+    padding:35px 0;
+}
+
+.hero{
+    min-height:420px;
+    background:
+        linear-gradient(rgba(31,11,13,.45), rgba(31,11,13,.45)),
+        url("https://images.unsplash.com/photo-1510812431401-41d2bd2722f3");
+    background-size:cover;
+    background-position:center;
+    border-radius:26px;
+    display:flex;
+    align-items:center;
+    padding:60px;
+    color:white;
+    margin-bottom:45px;
+}
+
+.hero h2{
+    font-size:44px;
+    max-width:650px;
+    margin:10px 0;
+}
+
+.hero p{
+    max-width:600px;
+    line-height:1.6;
+    font-size:18px;
+}
+
+.etiqueta{
+    color:#f1d59b;
+    letter-spacing:3px;
+    font-weight:bold;
+}
+
+h1,
+.seccion-titulo{
+    text-align:center;
+    color:#4b1118;
+}
+
+
+.lista{
+    list-style:none;
+    padding:0;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:18px;
+    text-align:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    border:1px solid #ead6b1;
+    transition:.3s;
+    max-width:320px;
+    margin:auto;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+
+.card img{
+    width:auto;
+    max-width:100%;
+    height:220px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 15px auto;
+}
+.card strong{
+    display:block;
+    font-size:21px;
+    color:#4b1118;
+    margin-bottom:8px;
+}
+
+.card span{
+    display:block;
+    color:#8f2e35;
+    font-weight:bold;
+}
+
+.precio{
+    font-size:22px;
+    color:#1f0b0d;
+    font-weight:bold;
+}
+
+.boton,
+a[href*="crear"],
+a[href*="editar"],
+a[href*="eliminar"],
+a[href*="toggle"]{
+    display:inline-block;
+    background:#4b1118;
+    color:white;
+    padding:11px 22px;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:8px 5px;
+    border:none;
+}
+
+.boton:hover,
+a[href*="crear"]:hover,
+a[href*="editar"]:hover,
+a[href*="eliminar"]:hover,
+a[href*="toggle"]:hover{
+    background:#8f2e35;
+}
+
+a[href*="crear"]{
+    display:block;
+    width:max-content;
+    margin:0 auto 28px auto;
+}
+
+form{
+    max-width:520px;
+    margin:30px auto;
+    background:white;
+    padding:35px;
+    border-radius:22px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    border:1px solid #ead6b1;
+}
+
+form label{
+    font-weight:bold;
+    color:#4b1118;
+}
+
+form input,
+form select{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    margin-top:6px;
+    margin-bottom:15px;
+}
+
+button{
+    background:#4b1118;
+    color:white;
+    border:none;
+    padding:12px 24px;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#8f2e35;
+}
+
+.footer{
+    background:#1f0b0d;
+    color:#f1d59b;
+    text-align:center;
+    padding:22px;
+    margin-top:40px;
+}
+.intro-catalogo{
+    text-align:center;
+    font-size:18px;
+    margin-bottom:35px;
+    color:#5f403f;
+}
+
+.topbar{
+    background:#1f0b0d;
+    color:#f1d59b;
+    overflow:hidden;
+    height:40px;
+    display:flex;
+    align-items:center;
+}
+
+.topbar-track{
+    display:flex;
+    width:max-content;
+    animation: scrollPromo 8s linear infinite;
+}
+
+.topbar-track span{
+    white-space:nowrap;
+    padding-right:80px;
+    font-weight:bold;
+}
+
+@keyframes scrollPromo{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}

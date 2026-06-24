@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Ventas{% endblock %}
+
+{% block body %}
+
+<h1>Ventas</h1>
+
+{% if perms.gestion.add_venta %}
+    <a href="{% url 'venta_crear' %}" class="boton">
+        Registrar venta
+    </a>
+{% endif %}
+
+<ul class="lista">
+    {% for venta in ventas %}
+        <li class="card">
+            <strong>Venta #{{ venta.id }}</strong>
+            <p>Cliente: {{ venta.cliente }}</p>
+            <p>Usuario: {{ venta.usuario }}</p>
+            <p>Fecha: {{ venta.fecha }}</p>
+        </li>
+    {% empty %}
+        <li class="card">No hay ventas registradas.</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

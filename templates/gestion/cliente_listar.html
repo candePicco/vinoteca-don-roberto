@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Clientes{% endblock %}
+
+{% block body %}
+
+<h1>CRUD Clientes</h1>
+
+<a href="{% url 'cliente_crear' %}" class="boton">
+    Agregar cliente
+</a>
+
+<ul class="lista">
+
+{% for cliente in clientes %}
+
+<li class="card">
+
+    <strong>
+        {{ cliente.nombre }} {{ cliente.apellido }}
+    </strong>
+
+    <br><br>
+
+    📞 {{ cliente.telefono }}
+
+    <br><br>
+
+    ✉️ {{ cliente.email }}
+
+    <br><br>
+
+    <a href="{% url 'cliente_editar' cliente.id %}" class="boton">
+        Editar
+    </a>
+
+    <a href="{% url 'cliente_eliminar' cliente.id %}" class="boton">
+        Eliminar
+    </a>
+
+</li>
+
+{% empty %}
+
+<li class="card">
+    No hay clientes cargados.
+</li>
+
+{% endfor %}
+
+</ul>
+
+{% endblock %}
