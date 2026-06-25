@@ -41,11 +41,17 @@ El sistema permite gestionar vinos, clientes y ventas mediante un panel de admin
 * Carga de imágenes.
 * Visualización del stock.
 
+<img width="1267" height="643" alt="Captura de pantalla 2026-06-24 230549" src="https://github.com/user-attachments/assets/82e0a36f-c0b8-4bea-bb71-a9842c21d37f" />
+
+
 ## Gestión de clientes
 
 * Alta de clientes.
 * Modificación de clientes.
 * Eliminación de clientes.
+
+<img width="1279" height="575" alt="Captura de pantalla 2026-06-24 231312" src="https://github.com/user-attachments/assets/ce317d3f-330f-46fb-8848-8524d486eb18" />
+
 
 ## Gestión de ventas
 
@@ -54,9 +60,15 @@ El sistema permite gestionar vinos, clientes y ventas mediante un panel de admin
 * Asociación con el usuario que realiza la venta.
 * Registro automático de fecha y hora.
 
+<img width="1279" height="563" alt="Captura de pantalla 2026-06-24 230610" src="https://github.com/user-attachments/assets/f2f694e5-6524-431d-ac63-b3dbc53b08e0" />
+
+
 ## Catálogo público
 
 Los usuarios no autenticados pueden visualizar el catálogo de vinos disponibles.
+
+<img width="1265" height="644" alt="Captura de pantalla 2026-06-24 230537" src="https://github.com/user-attachments/assets/62d68be7-7209-40c8-ac54-26ff639eca63" />
+
 
 ---
 
