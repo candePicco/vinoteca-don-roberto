@@ -262,21 +262,20 @@ button:hover{
 .topbar-track{
     display:flex;
     width:max-content;
-    animation: scrollPromo 8s linear infinite;
+    animation: scrollPromo 10s linear infinite;
 }
 
 .topbar-track span{
     white-space:nowrap;
-    padding-right:80px;
+    padding-right:950px;
     font-weight:bold;
 }
 
-@keyframes scrollPromo{
-    from{
-        transform:translateX(0);
+@keyframes scrollPromo {
+    0% {
+        transform: translateX(0);
     }
-
-    to{
-        transform:translateX(-50%);
+    100% {
+        transform: translateX(-50%);
     }
 }
