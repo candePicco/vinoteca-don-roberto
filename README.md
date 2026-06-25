@@ -16,6 +16,7 @@
 **Vinoteca Don Roberto** es un sistema web desarrollado con **Django** para la administración de una vinoteca.
 
 El sistema permite gestionar vinos, clientes y ventas mediante un panel de administración propio, además de ofrecer un catálogo público de vinos disponibles para los visitantes.
+<img width="1853" height="989" alt="Captura desde 2026-06-24 23-10-31" src="https://github.com/user-attachments/assets/fc0d9848-baf5-4ade-bf31-4afd69f95e60" />
 
 ---
 
@@ -28,6 +29,8 @@ El sistema permite gestionar vinos, clientes y ventas mediante un panel de admin
 * Inicio de sesión.
 * Cierre de sesión.
 * Gestión de permisos mediante grupos.
+<img width="1853" height="989" alt="Captura desde 2026-06-24 23-11-17" src="https://github.com/user-attachments/assets/a5357dca-d617-4af3-a4a5-f506058886c2" />
+<img width="1853" height="989" alt="Captura desde 2026-06-24 23-11-23" src="https://github.com/user-attachments/assets/0e01c297-1d33-42b6-9343-dbf6a301b281" />
 
 ## Gestión de vinos
 
